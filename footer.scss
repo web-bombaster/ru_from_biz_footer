@@ -1,0 +1,77 @@
+/* Импортировал стили сайта */
+
+@import url("https://from.biz/cdn/fonts/gilroy/stylesheet.css");
+@import url("https://from.biz/from/cdn/default/css/from-css.min.css");
+@import url("https://ru.from.biz/theme.css");
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Ниже стили только футера */
+footer {
+	margin-top: auto;
+}
+
+.f-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
+
+	@media screen and (max-width: 1199px) {
+		justify-content: flex-start;
+	}
+
+	@media screen and (max-width: 767px) {
+		gap: 16px;
+	}
+
+	span {
+		opacity: 0.5;
+	}
+}
+
+.f-bottom__link {
+	text-decoration: underline;
+	opacity: 0.5;
+
+	transition: all 0.25s;
+
+	@media screen and (max-width: 767px) {
+		width: 100%;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.f-bottom__copy {
+	@media screen and (max-width: 1199px) {
+		order: 2;
+		flex-grow: 1;
+		width: calc(50% - 40px / 2);
+	}
+
+	@media screen and (max-width: 767px) {
+		margin-top: 24px;
+	}
+}
+.f-bottom__celestra {
+	@media screen and (max-width: 1199px) {
+		order: 3;
+		flex-grow: 1;
+		align-self: flex-end;
+		width: calc(50% - 40px / 2);
+
+		text-align: right;
+	}
+
+	@media screen and (max-width: 767px) {
+		margin-top: 24px;
+	}
+}
